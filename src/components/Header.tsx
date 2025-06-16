@@ -11,7 +11,7 @@ const Header = () => {
               <TrendingUp className="h-6 w-6 text-white" />
             </div>
             <div>
-              <h2 className="text-xl font-bold text-gray-800">Batesy's Footnotes</h2>
+              <h2 className="text-xl font-bold text-gray-800">Batesy's footy predictor</h2>
               <p className="text-sm text-gray-600">AFL Analytics Platform</p>
             </div>
           </div>
