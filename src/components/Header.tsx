@@ -19,7 +19,7 @@ const Header = () => {
           <div className="flex items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
               <Calendar className="h-4 w-4" />
-              <span>Season 2024</span>
+              <span>Season 2025</span>
             </div>
             <div className="flex items-center space-x-2">
               <Users className="h-4 w-4" />
