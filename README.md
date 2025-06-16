@@ -1,4 +1,4 @@
-# Welcome to your Lovable project
+# Welcome to Batesy's footy project
 
 ## Project info
 
@@ -8,11 +8,7 @@
 
 There are several ways of editing your application.
 
-**Use Lovable**
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/63dec80d-9082-4d2d-9436-5ab1f8e6bca2) and start prompting.
-
-Changes made via Lovable will be committed automatically to this repo.
 
 **Use your preferred IDE**
 
