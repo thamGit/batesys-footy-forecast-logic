@@ -7,9 +7,9 @@ import PredictionCard from '@/components/PredictionCard';
 import { mockMatches } from '@/data/mockData';
 
 const PredictionDashboard = () => {
-  const [selectedLeague, setSelectedLeague] = useState('Premier League');
+  const [selectedLeague, setSelectedLeague] = useState('AFL');
   
-  const leagues = ['Premier League', 'Championship', 'La Liga', 'Bundesliga'];
+  const leagues = ['AFL'];
   
   const filteredMatches = mockMatches.filter(match => match.league === selectedLeague);
 
@@ -36,22 +36,22 @@ const PredictionDashboard = () => {
             <CardTitle className="text-sm font-medium">Model Accuracy</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">73.2%</div>
-            <Progress value={73.2} className="mt-2" />
+            <div className="text-2xl font-bold">75.1%</div>
+            <Progress value={75.1} className="mt-2" />
             <p className="text-xs text-muted-foreground mt-1">
-              Average across all models
+              Average across all AFL models
             </p>
           </CardContent>
         </Card>
 
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm font-medium">Predictions Today</CardTitle>
+            <CardTitle className="text-sm font-medium">Predictions This Round</CardTitle>
           </CardHeader>
           <CardContent>
             <div className="text-2xl font-bold">{filteredMatches.length}</div>
             <p className="text-xs text-muted-foreground">
-              Matches with AI predictions
+              AFL matches with AI predictions
             </p>
           </CardContent>
         </Card>
