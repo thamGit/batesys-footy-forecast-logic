@@ -12,7 +12,7 @@ const Header = () => {
             </div>
             <div>
               <h2 className="text-xl font-bold text-gray-800">Batesy's footy predictor</h2>
-              <p className="text-sm text-gray-600">AFL Analytics Platform</p>
+              <p className="text-sm text-gray-600">AFL & NRL Analytics Platform</p>
             </div>
           </div>
           
@@ -23,7 +23,7 @@ const Header = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Users className="h-4 w-4" />
-              <span>5 Developer Models</span>
+              <span>8 Developer Models</span>
             </div>
           </div>
         </div>

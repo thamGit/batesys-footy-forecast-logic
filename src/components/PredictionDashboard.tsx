@@ -9,9 +9,19 @@ import { mockMatches } from '@/data/mockData';
 const PredictionDashboard = () => {
   const [selectedLeague, setSelectedLeague] = useState('AFL');
   
-  const leagues = ['AFL'];
+  const leagues = ['AFL', 'NRL'];
   
   const filteredMatches = mockMatches.filter(match => match.league === selectedLeague);
+
+  // Calculate league-specific accuracy
+  const getLeagueAccuracy = (league: string) => {
+    const leagueMatches = mockMatches.filter(m => m.league === league);
+    if (leagueMatches.length === 0) return 0;
+    const avgConfidence = leagueMatches.reduce((sum, m) => sum + m.confidence, 0) / leagueMatches.length;
+    return avgConfidence;
+  };
+
+  const currentAccuracy = getLeagueAccuracy(selectedLeague);
 
   return (
     <div className="space-y-6">
@@ -36,10 +46,10 @@ const PredictionDashboard = () => {
             <CardTitle className="text-sm font-medium">Model Accuracy</CardTitle>
           </CardHeader>
           <CardContent>
-            <div className="text-2xl font-bold">75.1%</div>
-            <Progress value={75.1} className="mt-2" />
+            <div className="text-2xl font-bold">{currentAccuracy.toFixed(1)}%</div>
+            <Progress value={currentAccuracy} className="mt-2" />
             <p className="text-xs text-muted-foreground mt-1">
-              Average across all AFL models
+              Average across all {selectedLeague} models
             </p>
           </CardContent>
         </Card>
@@ -51,7 +61,7 @@ const PredictionDashboard = () => {
           <CardContent>
             <div className="text-2xl font-bold">{filteredMatches.length}</div>
             <p className="text-xs text-muted-foreground">
-              AFL matches with AI predictions
+              {selectedLeague} matches with AI predictions
             </p>
           </CardContent>
         </Card>

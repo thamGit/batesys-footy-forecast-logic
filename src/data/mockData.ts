@@ -1,7 +1,8 @@
 
-// Mock data for AFL predictions and historical matches
+// Mock data for AFL and NRL predictions and historical matches
 
 export const mockMatches = [
+  // AFL matches
   {
     id: '1',
     homeTeam: 'Collingwood',
@@ -79,10 +80,64 @@ export const mockMatches = [
     awayOdds: 6.50,
     drawOdds: 28.00,
     developerModel: 'AFL Specialist'
+  },
+  // NRL matches
+  {
+    id: 'nrl1',
+    homeTeam: 'Melbourne Storm',
+    awayTeam: 'Penrith Panthers',
+    league: 'NRL',
+    kickoff: '8:00 PM AEST',
+    prediction: 'Melbourne Storm Win',
+    confidence: 73,
+    homeOdds: 2.15,
+    awayOdds: 3.40,
+    drawOdds: 21.00,
+    developerModel: 'NRL Predictor Pro'
+  },
+  {
+    id: 'nrl2',
+    homeTeam: 'Sydney Roosters',
+    awayTeam: 'South Sydney Rabbitohs',
+    league: 'NRL',
+    kickoff: '7:30 PM AEST',
+    prediction: 'Sydney Roosters Win',
+    confidence: 68,
+    homeOdds: 1.95,
+    awayOdds: 3.80,
+    drawOdds: 19.50,
+    developerModel: 'Tham Predictor v3.0'
+  },
+  {
+    id: 'nrl3',
+    homeTeam: 'Brisbane Broncos',
+    awayTeam: 'Gold Coast Titans',
+    league: 'NRL',
+    kickoff: '3:00 PM AEST',
+    prediction: 'Brisbane Broncos Win',
+    confidence: 85,
+    homeOdds: 1.60,
+    awayOdds: 4.90,
+    drawOdds: 23.00,
+    developerModel: 'NRL Neural Network'
+  },
+  {
+    id: 'nrl4',
+    homeTeam: 'Canterbury Bulldogs',
+    awayTeam: 'Parramatta Eels',
+    league: 'NRL',
+    kickoff: '5:30 PM AEST',
+    prediction: 'Parramatta Eels Win',
+    confidence: 71,
+    homeOdds: 3.10,
+    awayOdds: 2.25,
+    drawOdds: 20.00,
+    developerModel: 'Rugby League AI'
   }
 ];
 
 export const mockHistoricalMatches = [
+  // AFL historical matches
   {
     id: 'h1',
     homeTeam: 'Sydney',
@@ -147,10 +202,51 @@ export const mockHistoricalMatches = [
     predictionCorrect: true,
     confidence: 81,
     developerModel: 'AFL Specialist'
+  },
+  // NRL historical matches
+  {
+    id: 'nrl_h1',
+    homeTeam: 'Melbourne Storm',
+    awayTeam: 'Cronulla Sharks',
+    homeScore: 28,
+    awayScore: 16,
+    league: 'NRL',
+    date: '2024-01-16',
+    prediction: 'Melbourne Storm Win',
+    predictionCorrect: true,
+    confidence: 79,
+    developerModel: 'NRL Predictor Pro'
+  },
+  {
+    id: 'nrl_h2',
+    homeTeam: 'Newcastle Knights',
+    awayTeam: 'Manly Sea Eagles',
+    homeScore: 18,
+    awayScore: 24,
+    league: 'NRL',
+    date: '2024-01-15',
+    prediction: 'Newcastle Knights Win',
+    predictionCorrect: false,
+    confidence: 62,
+    developerModel: 'Rugby League AI'
+  },
+  {
+    id: 'nrl_h3',
+    homeTeam: 'North Queensland Cowboys',
+    awayTeam: 'Wests Tigers',
+    homeScore: 32,
+    awayScore: 14,
+    league: 'NRL',
+    date: '2024-01-14',
+    prediction: 'North Queensland Cowboys Win',
+    predictionCorrect: true,
+    confidence: 86,
+    developerModel: 'NRL Neural Network'
   }
 ];
 
 export const mockDeveloperModels = [
+  // AFL models
   {
     id: 'model1',
     name: 'Batesy AI v2.1',
@@ -160,7 +256,8 @@ export const mockDeveloperModels = [
     accuracy: 76.5,
     totalPredictions: 324,
     features: ['Player Stats', 'Team Form', 'Weather Data', 'Injury Reports', 'Historical H2H', 'Ground Advantage'],
-    lastUpdated: '2024-01-16'
+    lastUpdated: '2024-01-16',
+    league: 'AFL'
   },
   {
     id: 'model2',
@@ -171,7 +268,8 @@ export const mockDeveloperModels = [
     accuracy: 73.2,
     totalPredictions: 289,
     features: ['Scoring Analysis', 'Home Ground Advantage', 'Ladder Position', 'Recent Form', 'Percentage'],
-    lastUpdated: '2024-01-15'
+    lastUpdated: '2024-01-15',
+    league: 'AFL'
   },
   {
     id: 'model3',
@@ -182,7 +280,8 @@ export const mockDeveloperModels = [
     accuracy: 71.8,
     totalPredictions: 412,
     features: ['Deep Learning', 'Upset Detection', 'Market Odds', 'Team Psychology', 'Interstate Travel'],
-    lastUpdated: '2024-01-14'
+    lastUpdated: '2024-01-14',
+    league: 'AFL'
   },
   {
     id: 'model4',
@@ -193,7 +292,8 @@ export const mockDeveloperModels = [
     accuracy: 74.9,
     totalPredictions: 267,
     features: ['Tactical Analysis', 'Coach Impact', 'Formation Data', 'Player Chemistry', 'Ground Conditions'],
-    lastUpdated: '2024-01-13'
+    lastUpdated: '2024-01-13',
+    league: 'AFL'
   },
   {
     id: 'model5',
@@ -204,17 +304,56 @@ export const mockDeveloperModels = [
     accuracy: 79.3,
     totalPredictions: 156,
     features: ['Ground Dimensions', 'Weather Analysis', 'Travel Fatigue', 'Finals Experience', 'Derby Factors'],
-    lastUpdated: '2024-01-12'
+    lastUpdated: '2024-01-12',
+    league: 'AFL'
   },
   {
     id: 'model6',
     name: 'Tham Predictor v3.0',
     developer: 'Tham',
     type: 'Machine Learning',
-    description: 'Advanced ensemble model combining multiple prediction algorithms with real-time team dynamics and player form analysis for AFL.',
+    description: 'Advanced ensemble model combining multiple prediction algorithms with real-time team dynamics and player form analysis for AFL and NRL.',
     accuracy: 77.8,
     totalPredictions: 201,
     features: ['Ensemble Learning', 'Real-time Analysis', 'Player Form', 'Team Dynamics', 'Quarter Predictions', 'Weather Impact'],
-    lastUpdated: '2024-01-17'
+    lastUpdated: '2024-01-17',
+    league: 'Both'
+  },
+  // NRL specific models
+  {
+    id: 'nrl_model1',
+    name: 'NRL Predictor Pro',
+    developer: 'Rugby League Analytics',
+    type: 'Machine Learning',
+    description: 'Specialized NRL prediction model using player statistics, team form, and Origin period considerations.',
+    accuracy: 74.6,
+    totalPredictions: 198,
+    features: ['Player Stats', 'Origin Impact', 'Injury Reports', 'Home Ground', 'Weather Conditions', 'Travel Fatigue'],
+    lastUpdated: '2024-01-16',
+    league: 'NRL'
+  },
+  {
+    id: 'nrl_model2',
+    name: 'Rugby League AI',
+    developer: 'NRL Tech',
+    type: 'Statistical',
+    description: 'Advanced statistical model focusing on NRL-specific metrics like completion rates, errors, and penalty counts.',
+    accuracy: 72.1,
+    totalPredictions: 165,
+    features: ['Completion Rates', 'Error Analysis', 'Penalty Tracking', 'Ladder Position', 'Recent Form'],
+    lastUpdated: '2024-01-15',
+    league: 'NRL'
+  },
+  {
+    id: 'nrl_model3',
+    name: 'NRL Neural Network',
+    developer: 'Deep Rugby',
+    type: 'Machine Learning',
+    description: 'Deep learning model trained on extensive NRL data, incorporating player movements and tactical patterns.',
+    accuracy: 76.8,
+    totalPredictions: 142,
+    features: ['Deep Learning', 'Tactical Analysis', 'Player Movement', 'Set Plays', 'Defensive Patterns'],
+    lastUpdated: '2024-01-14',
+    league: 'NRL'
   }
 ];

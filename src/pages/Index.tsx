@@ -19,7 +19,7 @@ const Index = () => {
             Batesy's footy predictor
           </h1>
           <p className="text-lg text-gray-600">
-            AI-Powered AFL Predictions & Analytics
+            AI-Powered AFL & NRL Predictions & Analytics
           </p>
         </div>
 
