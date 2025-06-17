@@ -205,5 +205,16 @@ export const mockDeveloperModels = [
     totalPredictions: 156,
     features: ['Ground Dimensions', 'Weather Analysis', 'Travel Fatigue', 'Finals Experience', 'Derby Factors'],
     lastUpdated: '2024-01-12'
+  },
+  {
+    id: 'model6',
+    name: 'Tham Predictor v3.0',
+    developer: 'Tham',
+    type: 'Machine Learning',
+    description: 'Advanced ensemble model combining multiple prediction algorithms with real-time team dynamics and player form analysis for AFL.',
+    accuracy: 77.8,
+    totalPredictions: 201,
+    features: ['Ensemble Learning', 'Real-time Analysis', 'Player Form', 'Team Dynamics', 'Quarter Predictions', 'Weather Impact'],
+    lastUpdated: '2024-01-17'
   }
 ];
